@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR</title>
+</head>
+<body>
+    <h1 style="background-color:yellow;font-size:35px;text-align:center">Extract the image from text</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" />
+        <br/><br/>
+        <label >Enter the key </label>
+        <input type="text" name="pattern" placeholder="key value"><br><br>
+        <input type="submit" value="Extract Text" /><br><br>
+        <div>
+            data:<br><b>{{data}}</b>
+        </div><br>
+        <div>
+            full_text:<b>{{text_data}}<b>
+        </div>
+
+    </form>
+</body>
+</html>
